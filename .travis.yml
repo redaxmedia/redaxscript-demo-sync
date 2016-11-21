@@ -17,7 +17,7 @@ install:
 
 script:
 - grunt
-- install.sh
+- sh install.sh
 
 after_script:
 - lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && exit"
