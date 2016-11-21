@@ -33,6 +33,7 @@ module.exports = function (grunt)
 					'libraries/**',
 					'modules/Analytics/**',
 					'modules/Demo/**',
+					'modules/Preview/**',
 					'templates/admin/**',
 					'templates/console/**',
 					'templates/default/**',

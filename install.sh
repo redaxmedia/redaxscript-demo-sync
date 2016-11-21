@@ -9,5 +9,9 @@ php console.php uninstall database
 php console.php install database --admin-name admin --admin-user admin --admin-password admin --admin-email admin@localhost
 php console.php install module --alias Analytics
 php console.php install module --alias Demo
+php console.php install module --alias Preview
 php console.php status database
 php console.php config lock
+
+cd..
+chmod 444 build/config.php
