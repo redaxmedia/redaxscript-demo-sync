@@ -15,6 +15,13 @@ install:
 - npm install --global grunt-cli
 - ied install
 
+script:
+- grunt
+- install.sh
+
+after_script:
+- lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && exit"
+
 notifications:
  email:
  - team@redaxscript.com
