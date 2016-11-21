@@ -12,6 +12,3 @@ php console.php install module --alias Demo
 php console.php install module --alias Preview
 php console.php status database
 php console.php config lock
-
-cd..
-chmod 444 build/config.php

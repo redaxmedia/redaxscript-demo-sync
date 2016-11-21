@@ -20,7 +20,7 @@ script:
 - sh install.sh
 
 after_script:
-- lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && exit"
+- lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && chmod 0444 config.php && exit"
 
 notifications:
  email:
