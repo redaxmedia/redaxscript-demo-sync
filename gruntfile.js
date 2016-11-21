@@ -36,7 +36,6 @@ module.exports = function (grunt)
 					'modules/Demo/**',
 					'modules/Preview/**',
 					'templates/admin/**',
-					'templates/console/**',
 					'templates/default/**',
 					'config.php',
 					'console.php',

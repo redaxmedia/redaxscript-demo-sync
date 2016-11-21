@@ -11,4 +11,4 @@ php console.php install module --alias Analytics
 php console.php install module --alias Demo
 php console.php install module --alias Preview
 php console.php status database
-php console.php config lock
+rm console.php
