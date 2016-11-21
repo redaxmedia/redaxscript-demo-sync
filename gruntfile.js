@@ -36,11 +36,9 @@ module.exports = function (grunt)
 					'templates/admin/**',
 					'templates/console/**',
 					'templates/default/**',
-					'templates/install/**',
 					'config.php',
 					'console.php',
 					'index.php',
-					'README.md',
 					'.htaccess'
 				],
 				dest: 'build',
