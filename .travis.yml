@@ -21,7 +21,7 @@ script:
 - grunt
 - sh install.sh
 
-after_script:
+after_success:
 - lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && chmod 0444 config.php && exit"
 
 notifications:
