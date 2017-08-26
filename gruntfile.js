@@ -6,8 +6,8 @@ module.exports = function (grunt)
 
 	grunt.initConfig(
 	{
-		shell: require('./tasks/shell'),
-		copy: require('./tasks/copy')
+		shell: require('./tasks/shell')(grunt),
+		copy: require('./tasks/copy')(grunt)
 	});
 
 	/* load tasks */
