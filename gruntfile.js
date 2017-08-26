@@ -6,47 +6,8 @@ module.exports = function (grunt)
 
 	grunt.initConfig(
 	{
-		version: grunt.file.readJSON('vendor/redaxmedia/redaxscript/package.json').version,
-		shell:
-		{
-			removeBuild:
-			{
-				command: 'rm -rf build'
-			},
-			options:
-			{
-				stdout: true,
-				failOnError: true
-			}
-		},
-		copy:
-		{
-			distDemo:
-			{
-				src:
-				[
-					'assets/**',
-					'cache/**',
-					'database/**',
-					'dist/**',
-					'includes/**',
-					'languages/en.json',
-					'libraries/**',
-					'modules/Analytics/**',
-					'modules/Demo/**',
-					'modules/Preview/**',
-					'templates/admin/**',
-					'templates/default/**',
-					'config.php',
-					'console.php',
-					'index.php',
-					'.htaccess'
-				],
-				dest: 'build',
-				cwd: 'vendor/redaxmedia/redaxscript/',
-				expand: true
-			}
-		}
+		shell: require('./tasks/shell'),
+		copy: require('./tasks/copy')
 	});
 
 	/* load tasks */
@@ -59,5 +20,14 @@ module.exports = function (grunt)
 	[
 		'shell:removeBuild',
 		'copy'
+	]);
+	grunt.registerTask('config',
+	[
+		'shell:configDatabase',
+		'shell:configModules'
+	]);
+	grunt.registerTask('install',
+	[
+		'shell:installDatabase'
 	]);
 };

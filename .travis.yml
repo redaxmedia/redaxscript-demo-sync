@@ -19,7 +19,8 @@ install:
 script:
 - grunt build --gruntfile vendor/redaxmedia/redaxscript/gruntfile.js
 - grunt
-- sh install.sh
+- grunt config
+- grunt install
 
 after_success:
 - lftp $FTP_URL -e "glob -d mirror build . --reverse --delete-first --parallel=10 && chmod 0444 config.php && exit"
