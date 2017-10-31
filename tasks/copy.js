@@ -25,7 +25,7 @@ module.exports = function ()
 				'.htaccess'
 			],
 			dest: 'build',
-			cwd: 'vendor/redaxmedia/redaxscript/',
+			cwd: 'vendor/redaxscript/redaxscript/',
 			expand: true
 		}
 	};
