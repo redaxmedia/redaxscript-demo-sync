@@ -6,8 +6,9 @@ module.exports = grunt =>
 
 	grunt.initConfig(
 	{
-		shell: require('./tasks/shell')(grunt),
-		copy: require('./tasks/copy')(grunt)
+		copy: require('./tasks/copy')(grunt),
+		ftpress: require('./tasks/ftpress')(grunt),
+		shell: require('./tasks/shell')(grunt)
 	});
 
 	/* load tasks */
@@ -20,6 +21,10 @@ module.exports = grunt =>
 	[
 		'shell:removeBuild',
 		'copy'
+	]);
+	grunt.registerTask('deploy',
+	[
+		'ftpress:deploy'
 	]);
 	grunt.registerTask('config',
 	[
