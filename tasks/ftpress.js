@@ -10,7 +10,7 @@ module.exports = grunt =>
 			[
 				'build'
 			],
-			dest: '.',
+			dest: 'www/htdocs/w00976cb/redaxscript-demo',
 			options:
 			{
 				url: process.env.FTP_URL,
