@@ -20,7 +20,7 @@ module.exports = () =>
 				'modules/Demo/**',
 				'modules/FormValidator/**',
 				'modules/TextareaResizer/**',
-				"modules/TableSorter**",
+				"modules/TableSorter/**",
 				'templates/admin/**',
 				'templates/default/**',
 				'config.php',
