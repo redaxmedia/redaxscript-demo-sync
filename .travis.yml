@@ -23,6 +23,7 @@ script:
 - grunt
 - grunt config
 - grunt install
+- grunt lock
 
 after_success:
 - grunt deploy

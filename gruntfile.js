@@ -22,10 +22,6 @@ module.exports = grunt =>
 		'shell:removeBuild',
 		'copy'
 	]);
-	grunt.registerTask('deploy',
-	[
-		'ftpress:deploy'
-	]);
 	grunt.registerTask('config',
 	[
 		'shell:configDatabase',
@@ -33,6 +29,15 @@ module.exports = grunt =>
 	]);
 	grunt.registerTask('install',
 	[
-		'shell:installDatabase'
+		'shell:installDatabase',
+		'shell:installModules'
+	]);
+	grunt.registerTask('lock',
+	[
+		'shell:removeConsole'
+	]);
+	grunt.registerTask('deploy',
+	[
+		'ftpress:deploy'
 	]);
 };
