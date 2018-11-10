@@ -9,7 +9,7 @@ module.exports = () =>
 			command:
 			[
 				'cd build',
-				'php console.php config parse --db-url $DB_URL',
+				'php console.php config parse --db-url $DB_URL --halt-on-error',
 				'php console.php status database'
 			]
 			.join('&&')
@@ -28,8 +28,8 @@ module.exports = () =>
 			command:
 			[
 				'cd build',
-				'php console.php uninstall database',
-				'php console.php install database --admin-name admin --admin-user admin --admin-password admin --admin-email admin@localhost'
+				'php console.php uninstall database --halt-on-error',
+				'php console.php install database --admin-name admin --admin-user admin --admin-password admin --admin-email admin@localhost --halt-on-error'
 			]
 			.join('&&')
 		},
@@ -38,8 +38,8 @@ module.exports = () =>
 			command:
 			[
 				'cd build',
-				'php console.php install module --alias Analytics',
-				'php console.php install module --alias Demo'
+				'php console.php install module --alias Analytics --halt-on-error',
+				'php console.php install module --alias Demo --halt-on-error'
 			]
 			.join('&&')
 		},
