@@ -18,6 +18,7 @@ module.exports = () =>
 				'modules/AliasGenerator/**',
 				'modules/Analytics/**',
 				'modules/Demo/**',
+				'modules/Dialog/**',
 				'modules/FormValidator/**',
 				'modules/TextareaResizer/**',
 				"modules/TableSorter/**",
