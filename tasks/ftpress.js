@@ -22,7 +22,8 @@ module.exports = grunt =>
 					'mv {TARGET}-new-{TIMESTAMP} {TARGET}',
 					'rm -rf {TARGET}-old-{TIMESTAMP}',
 					'exit'
-				]
+				],
+				verbose: true
 			}
 		}
 	};
