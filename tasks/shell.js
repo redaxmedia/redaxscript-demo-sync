@@ -39,7 +39,6 @@ module.exports = () =>
 			[
 				'cd build',
 				'php console.php install module --alias Analytics --halt-on-error',
-				'php console.php install module --alias Dialog --halt-on-error',
 				'php console.php install module --alias Demo --halt-on-error'
 			]
 			.join('&&')
