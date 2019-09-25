@@ -17,6 +17,7 @@ module.exports = () =>
 				'libraries/**',
 				'modules/AliasGenerator/**',
 				'modules/Analytics/**',
+				'modules/Dashboard/**',
 				'modules/Demo/**',
 				'modules/Dialog/**',
 				'modules/FormValidator/**',
