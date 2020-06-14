@@ -44,6 +44,15 @@ module.exports = () =>
 			]
 			.join('&&')
 		},
+		configDirectory:
+		{
+			command:
+			[
+				'cd build',
+				'mkdir upload'
+			]
+			.join('&&')
+		},
 		removeConsole:
 		{
 			command:

@@ -25,7 +25,8 @@ module.exports = grunt =>
 	grunt.registerTask('config',
 	[
 		'shell:configDatabase',
-		'shell:configModules'
+		'shell:configModules',
+		'shell:configDirectory'
 	]);
 	grunt.registerTask('install',
 	[
