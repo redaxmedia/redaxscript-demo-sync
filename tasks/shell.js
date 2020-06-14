@@ -29,7 +29,7 @@ module.exports = () =>
 			[
 				'cd build',
 				'php console.php uninstall database --halt-on-error',
-				'php console.php install database --admin-name admin --admin-user admin --admin-password admin --admin-email admin@localhost --halt-on-error'
+				'php console.php install database --admin-name admin --admin-user admin --admin-password aaAA00AAaa --admin-email admin@localhost --halt-on-error'
 			]
 			.join('&&')
 		},
