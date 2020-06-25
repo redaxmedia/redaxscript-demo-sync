@@ -6,7 +6,6 @@ addons:
  apt:
   packages:
   - lftp
-  - fontforge
 
 before_install:
 - composer global require hirak/prestissimo
