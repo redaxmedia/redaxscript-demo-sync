@@ -1,0 +1,31 @@
+name: ci
+
+on: [ push, pull_request ]
+
+jobs:
+ sync:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Set up PHP 7.4
+    uses: shivammathur/setup-php@2.7.0
+    with:
+     php-version: 7.4
+  - name: Set up Node 15
+    uses: actions/setup-node@v1
+    with:
+     node-version: 15
+  - run: sudo apt install lftp
+  - run: composer install 
+  - run: npm install
+  - run: grunt build --gruntfile=vendor/redaxscript/redaxscript/gruntfile.js
+  - run: grunt copy
+  - run: grunt config
+    env:
+     DB_URL: ${{ secrets.DB_URL }}
+  - run: grunt install   
+  - run: grunt lock
+  - run: grunt deploy
+    env:
+     FTP_URL: ${{ secrets.FTP_URL }}
