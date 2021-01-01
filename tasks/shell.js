@@ -51,15 +51,6 @@ module.exports = () =>
 			]
 			.join('&&')
 		},
-		removeConsole:
-		{
-			command:
-			[
-				'cd build',
-				'rm console.php'
-			]
-			.join('&&')
-		},
 		removeBuild:
 		{
 			command: 'rm -rf build'

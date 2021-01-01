@@ -25,7 +25,6 @@ jobs:
     env:
      DB_URL: ${{ secrets.DB_URL }}
   - run: grunt install   
-  - run: grunt lock
   - run: grunt deploy
     env:
      FTP_URL: ${{ secrets.FTP_URL }}
