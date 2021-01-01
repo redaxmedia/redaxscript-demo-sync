@@ -25,6 +25,7 @@ module.exports = () =>
 				'modules/UnmaskPassword/**',
 				'modules/VisualEditor/**',
 				'templates/admin/**',
+				'templates/console/**',
 				'templates/default/**',
 				'config.php',
 				'console.php',
